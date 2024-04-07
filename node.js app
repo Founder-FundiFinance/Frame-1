@@ -1,0 +1,34 @@
+const express = require('express');
+const app = express();
+app.get('/', (req, res) => {
+  res.send(`
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Memgen - Building Memefi on Base</title>
+        <!-- Add these two lines -->
+        <meta property="fc:frame" content="vNext" />
+        <meta property="fc:frame:image" content="https://www.dropbox.com/scl/fi/tn83ag0drrpq1gisq72o0/wARPCAST.png?rlkey=kjhh0pmiazvkfp2885uara4sg&raw=1" />
+        <style>
+            /* Your CSS here */
+        </style>
+    </head>
+    <body>
+        <div class="frame">
+            <img src="https://www.dropbox.com/scl/fi/tn83ag0drrpq1gisq72o0/wARPCAST.png?rlkey=kjhh0pmiazvkfp2885uara4sg&raw=1" alt="Your Logo" class="logo">
+            <h2>Memgen - Building Memefi on Base</h2>
+            <a href="https://twitter.com/memgen_io" target="_blank">
+                <button class="button">Twitter</button>
+            </a>
+            <a href="https://t.me/+YK5n--QlSW9lNmRk" target="_blank">
+                <button class="button telegram">Telegram</button>
+            </a>
+        </div>
+    </body>
+    </html>
+  `);
+});
+
+app.listen(3000);
